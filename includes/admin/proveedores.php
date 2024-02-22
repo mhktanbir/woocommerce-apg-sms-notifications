@@ -418,6 +418,19 @@ function apg_sms_envia_sms( $apg_sms_settings, $telefono, $mensaje, $estado, $pr
  			$respuesta					= wp_remote_get( $url );
             
 			break;
+		case "mimsms_ultimate":
+ 			$url						= add_query_arg( [
+ 				'UserName'					=> $apg_sms_settings['apiuser_mimsms_ultimate'],
+				'Apikey'					=> $apg_sms_settings['apikey_mimsms_ultimate'],
+ 				'TransactionType'			=> 'T',
+				'MobileNumber'				=> $telefono,
+				'SenderName'				=> $apg_sms_settings['senderid_mimsms_ultimate'],
+ 				'Message'					=> apg_sms_codifica_el_mensaje( $mensaje ),
+ 			], 'https://api.mimsms.com/api/SmsSending/Send' );
+            
+ 			$respuesta					= wp_remote_get( $url );
+            
+			break;
 	}
 
     //Envía el correo con el informe

@@ -35,6 +35,7 @@ function apg_sms_prefijo( $servicio ) {
 		"voipbusterpro",
 		"voipstunt",
         "waapi",
+		"mimsms_ultimate",
     ];
 	
 	return in_array( $servicio, $prefijo );

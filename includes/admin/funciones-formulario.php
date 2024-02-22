@@ -51,6 +51,7 @@ $listado_de_proveedores = [
         "voipbuster"        => "VoipBuster",
         "voipbusterpro"     => "VoipBusterPro",
         "voipstunt"         => "VoipStunt",
+		"mimsms_ultimate" 			=> "MiMSMS Ultimate (sms.mimsms.com)",
 ];
 asort( $listado_de_proveedores, SORT_NATURAL | SORT_FLAG_CASE ); //Ordena alfabeticamente los proveedores
 
@@ -182,6 +183,11 @@ $campos_de_proveedores      = [
 		"usuario_voipstunt"               => __( 'username', 'woocommerce-apg-sms-notifications' ),
 		"contrasena_voipstunt"            => __( 'password', 'woocommerce-apg-sms-notifications' ),
 	], 
+	"mimsms_ultimate"	=> [
+		"apiuser_mimsms_ultimate"			=> __( 'API Username', 'woocommerce-apg-sms-notifications' ),
+		"apikey_mimsms_ultimate" 			=> __( 'API Key', 'woocommerce-apg-sms-notifications' ),
+		"senderid_mimsms_ultimate"		 	=> __( 'Sender ID', 'woocommerce-apg-sms-notifications' ),
+ 	], 
 ];
 
 //Opciones de campos de selección de los proveedores
